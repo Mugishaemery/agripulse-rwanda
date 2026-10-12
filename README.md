@@ -1,4 +1,5 @@
 # AgriPulse Rwanda
+**Live demo:** https://agripulse-rwanda.onrender.com
 **Data-Driven Agricultural Productivity and Risk Intelligence** - NISR Big Data Hackathon 2026, Track 1 (Agricultural Productivity).
 
 ## Overview
