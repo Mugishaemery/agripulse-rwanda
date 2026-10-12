@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en"><head><meta charset="utf-8"><meta name="color-scheme" content="light"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Home · AgriPulse Rwanda</title>
+<link href="https://fonts.googleapis.com/css2?family=Manrope:wght@600;700;800&family=IBM+Plex+Sans:wght@400;500;600&display=swap" rel="stylesheet">
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+
+<link href="/css/style.css" rel="stylesheet"></head>
+<body><div id="nav"></div>
+
+<header class="hero"><div class="container"><div class="row align-items-center g-5"><div class="col-lg-7"><h1>AgriPulse Rwanda</h1><p class="sub">Data-Driven Agricultural Productivity and Risk Intelligence</p>
+<p class="lead">Transforming agricultural data into actionable insights for better decision-making in Rwanda.</p>
+<div class="d-flex flex-wrap gap-2 mt-4"><a class="btn btn-gold" href="/dashboard">View Dashboard</a><a class="btn btn-outline-light" href="/map">Explore Agricultural Map</a><a class="btn btn-outline-light" href="/prediction">Run Yield Prediction</a></div></div><div class="col-lg-5"><div class="snap" id="snap" aria-live="polite"></div></div></div></div></header>
+<section class="section"><div class="container"><div class="row g-4">
+<div class="col-md-6"><h2>The problem</h2><p>Rwanda&rsquo;s farms are small and varied. Planners need to see where yields lag, across districts, crops and seasons, before they can decide where to look closer. Survey data holds the answer, but raw microdata is hard to use.</p></div>
+<div class="col-md-6"><h2>The solution</h2><p>AgriPulse turns the NISR Seasonal Agricultural Survey into comparisons, a yield estimator and a transparent risk view, so a planner can go from a district to a short list of questions to investigate.</p></div></div></div></section>
+<section class="section alt"><div class="container"><h2>Key capabilities</h2><div class="row g-3 mt-1">
+<div class="col-md-6 col-lg-3"><div class="panel h-100"><h3>Dashboard</h3><p class="mb-0">Yield by crop, season and district, plus input associations.</p></div></div>
+<div class="col-md-6 col-lg-3"><div class="panel h-100"><h3>Map</h3><p class="mb-0">Filter districts by province, season and crop; click for details.</p></div></div>
+<div class="col-md-6 col-lg-3"><div class="panel h-100"><h3>Yield prediction</h3><p class="mb-0">Estimate yield from plot characteristics known before harvest.</p></div></div>
+<div class="col-md-6 col-lg-3"><div class="panel h-100"><h3>Risk and priorities</h3><p class="mb-0">Low, medium and high risk with the rule shown openly.</p></div></div></div></div></section>
+<section class="section"><div class="container"><h2>How the platform works</h2>
+<div class="pipeline my-3"><span class="s">NISR data</span><i>&rarr;</i><span class="s">Cleaning</span><i>&rarr;</i><span class="s">Statistics</span><i>&rarr;</i><span class="s">ML prediction</span><i>&rarr;</i><span class="s">Risk assessment</span><i>&rarr;</i><span class="s">Decision support</span></div>
+<p><b>Data source:</b> NISR Seasonal Agricultural Survey 2024 (Seasons A, B and C). Every figure on the site comes from the loaded dataset; anything else is labelled DEMO DATA.</p></div></section>
+<footer><div class="container">AgriPulse Rwanda · NISR Big Data Hackathon 2026 · Source: NISR Seasonal Agricultural Survey 2024. Associations shown are observational, not causal.</div></footer>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+
+<script src="/js/common.js"></script>
+<script src="/js/home.js"></script>
+</body></html>

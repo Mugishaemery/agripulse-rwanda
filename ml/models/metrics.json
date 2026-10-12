@@ -1,0 +1,241 @@
+{
+ "available": true,
+ "best": "Gradient Boosting",
+ "scope": "12 annual crops; plots with a measured crop area; split by survey segment",
+ "n_train": 28027,
+ "n_test": 8196,
+ "models": [
+  {
+   "name": "Baseline (crop x season median)",
+   "mae": 1262.3,
+   "rmse": 4759.5,
+   "mdape": 36.3,
+   "r2": 0.281,
+   "r2_log": 0.665
+  },
+  {
+   "name": "Linear Regression",
+   "mae": 1248.6,
+   "rmse": 4756.1,
+   "mdape": 36.3,
+   "r2": 0.282,
+   "r2_log": 0.698
+  },
+  {
+   "name": "Random Forest",
+   "mae": 1181.1,
+   "rmse": 4706.7,
+   "mdape": 35.1,
+   "r2": 0.297,
+   "r2_log": 0.721
+  },
+  {
+   "name": "Gradient Boosting",
+   "mae": 1186.5,
+   "rmse": 4713.2,
+   "mdape": 35.0,
+   "r2": 0.295,
+   "r2_log": 0.722
+  },
+  {
+   "name": "Gradient Boosting (regularized)",
+   "mae": 1223.8,
+   "rmse": 4773.1,
+   "mdape": 35.8,
+   "r2": 0.277,
+   "r2_log": 0.708
+  }
+ ],
+ "sensitivity_all_plots": [
+  {
+   "name": "Baseline (crop x season median)",
+   "mae": 1381.7,
+   "rmse": 3288.7,
+   "mdape": 42.2,
+   "r2": 0.433,
+   "r2_log": 0.61
+  },
+  {
+   "name": "Linear Regression",
+   "mae": 1332.4,
+   "rmse": 3220.9,
+   "mdape": 41.0,
+   "r2": 0.456,
+   "r2_log": 0.642
+  },
+  {
+   "name": "Random Forest",
+   "mae": 1219.3,
+   "rmse": 3143.0,
+   "mdape": 37.9,
+   "r2": 0.482,
+   "r2_log": 0.691
+  },
+  {
+   "name": "Gradient Boosting",
+   "mae": 1229.3,
+   "rmse": 3134.7,
+   "mdape": 38.1,
+   "r2": 0.485,
+   "r2_log": 0.691
+  },
+  {
+   "name": "Gradient Boosting (regularized)",
+   "mae": 1280.6,
+   "rmse": 3214.7,
+   "mdape": 39.3,
+   "r2": 0.459,
+   "r2_log": 0.671
+  }
+ ],
+ "n_test_sensitivity": 9688,
+ "by_crop": [
+  {
+   "crop": "Bean",
+   "n_test": 2926,
+   "baseline_mdape": 33.0,
+   "model_mdape": 34.4
+  },
+  {
+   "crop": "Maize",
+   "n_test": 2132,
+   "baseline_mdape": 41.6,
+   "model_mdape": 37.4
+  },
+  {
+   "crop": "Sweet potato",
+   "n_test": 887,
+   "baseline_mdape": 31.2,
+   "model_mdape": 31.5
+  },
+  {
+   "crop": "Irish potato",
+   "n_test": 491,
+   "baseline_mdape": 32.1,
+   "model_mdape": 31.6
+  },
+  {
+   "crop": "Sorghum",
+   "n_test": 472,
+   "baseline_mdape": 29.9,
+   "model_mdape": 26.5
+  },
+  {
+   "crop": "Soybean",
+   "n_test": 411,
+   "baseline_mdape": 41.3,
+   "model_mdape": 39.1
+  },
+  {
+   "crop": "Vegetables",
+   "n_test": 311,
+   "baseline_mdape": 44.6,
+   "model_mdape": 47.9
+  },
+  {
+   "crop": "Pea",
+   "n_test": 176,
+   "baseline_mdape": 47.2,
+   "model_mdape": 44.2
+  },
+  {
+   "crop": "Groundnuts",
+   "n_test": 162,
+   "baseline_mdape": 38.1,
+   "model_mdape": 44.6
+  },
+  {
+   "crop": "Yams & Taro",
+   "n_test": 135,
+   "baseline_mdape": 40.4,
+   "model_mdape": 41.5
+  },
+  {
+   "crop": "Paddy rice",
+   "n_test": 65,
+   "baseline_mdape": 30.8,
+   "model_mdape": 25.8
+  }
+ ],
+ "feature_importance": [
+  {
+   "feature": "crop",
+   "label": "Crop",
+   "importance": 1.0962
+  },
+  {
+   "feature": "district",
+   "label": "District",
+   "importance": 0.0367
+  },
+  {
+   "feature": "improved_seed",
+   "label": "Improved seed",
+   "importance": 0.0263
+  },
+  {
+   "feature": "log_area_ha",
+   "label": "Area under the crop",
+   "importance": 0.0117
+  },
+  {
+   "feature": "season",
+   "label": "Season",
+   "importance": 0.0113
+  },
+  {
+   "feature": "cropping_system",
+   "label": "Cropping system",
+   "importance": 0.0096
+  },
+  {
+   "feature": "inorganic_fert",
+   "label": "Inorganic fertilizer",
+   "importance": 0.0031
+  },
+  {
+   "feature": "fert_rate_band",
+   "label": "Inorganic fertilizer rate",
+   "importance": 0.0029
+  },
+  {
+   "feature": "pesticide",
+   "label": "Pesticide/fungicide",
+   "importance": 0.0029
+  },
+  {
+   "feature": "irrigated",
+   "label": "Irrigation",
+   "importance": 0.0023
+  },
+  {
+   "feature": "organic_fert",
+   "label": "Organic fertilizer",
+   "importance": 0.0011
+  },
+  {
+   "feature": "consolidated_land",
+   "label": "Land consolidation site",
+   "importance": 0.0004
+  },
+  {
+   "feature": "erosion_degree",
+   "label": "Erosion degree",
+   "importance": 0.0
+  },
+  {
+   "feature": "anti_erosion",
+   "label": "Anti-erosion measures",
+   "importance": 0.0
+  },
+  {
+   "feature": "mechanized",
+   "label": "Mechanization",
+   "importance": 0.0
+  }
+ ],
+ "interval_80pct_log": [
+  -0.8252,
+  0.7105
+ ]
+}

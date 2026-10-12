@@ -1,0 +1,13 @@
+{
+  "_note": "Taken from the NISR SAS 2024 data dictionaries (files F6, F3, F10). Season mapping of files to A/B/C and units MUST be confirmed with the questionnaire before use.",
+  "keys": ["Segment_ID", "s1q6", "s2q1"],
+  "location": ["s1q1", "s1q2"],
+  "crop": ["s2q4", "CropCategory"],
+  "area_sqm": "s2q2",
+  "yield_numerator_candidates": ["s2q21", "s2q22"],
+  "survey_weight": "plot_weight",
+  "features_pre_harvest": ["s1q2", "s2q4", "s2q2", "s2q7", "s2q9", "s2q11", "s3q3", "s3q9", "s3q17", "s3q19", "s4q1", "s4q3", "s4q6", "s4q9", "s4q10_1", "s4q11_1", "s4q15"],
+  "exclude_leakage": ["s2q19_*", "s2q20_*", "s2q21", "s2q22", "s2q23", "s2q25*", "s2q26", "s2q27", "s2q28", "s2q29-s2q50", "s2q8 (expected harvest period: review)"],
+  "review_before_use": ["s2q13_*, s2q14-s2q18 (seed quantity/cost: post-sowing, not pre-sowing)", "s1q8, s1q9 (farmer gender/age: fairness review)"],
+  "not_in_all_files": {"Season file F10 (Sss) lacks": ["s2q5", "s2q6", "s2q10"]}
+}

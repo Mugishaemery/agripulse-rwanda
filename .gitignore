@@ -1,0 +1,11 @@
+node_modules/
+.env
+data/raw/*
+!data/raw/.gitkeep
+*.log
+
+# microdata-derived files (NISR terms: do not redistribute)
+data/processed/plots_clean*
+data/processed/crop_codes.csv
+data/processed/inspect_report.txt
+data/processed/cleaning_log.txt

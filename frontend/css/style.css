@@ -1,0 +1,64 @@
+/* AgriPulse design tokens: graphite chrome, lime spark accent, calm light content */
+:root{--g900:#14181b;--g800:#1b2024;--g700:#2a3136;--g600:#434c53;--g400:#79838b;--g200:#d9dee2;--g100:#eceff1;--g50:#f6f7f8;
+--lime:#c6f432;--limeD:#7ea10a;--ink:#1b2024;--gray:#5d676f;--line:#dde1e4;--high:#b3392f;--med:#c27d0e;--low:#2c7a4b}
+html{color-scheme:light}
+body{background:var(--g50);color:var(--ink);font-family:'IBM Plex Sans',system-ui,sans-serif;font-size:.95rem;line-height:1.6;-webkit-font-smoothing:antialiased;overflow-x:hidden}
+h1,h2,h3,h4,.brand{font-family:'Manrope','IBM Plex Sans',sans-serif;letter-spacing:-.015em;font-weight:700;color:inherit}
+img,canvas,svg{max-width:100%}
+a{color:#2f4400;text-underline-offset:3px}a:hover{color:#000}
+/* nav */
+.topbar{background:var(--g900);padding:.55rem 0}
+.topbar .navbar-brand{color:#fff;font-size:1.1rem;display:flex;align-items:center;gap:.5rem;margin-right:1rem}
+.topbar .navbar-brand:before{content:"";width:.7rem;height:.7rem;border-radius:50%;background:var(--lime);box-shadow:0 0 0 3px rgba(198,244,50,.18)}
+.topbar .nav-link{color:#aeb7be;font-weight:500;font-size:.88rem;padding:.5rem .75rem}
+.topbar .nav-link:hover{color:#fff}.topbar .nav-link.active{color:#fff;box-shadow:inset 0 -2px var(--lime)}
+.topbar .navbar-toggler{border:1px solid rgba(255,255,255,.25);padding:.3rem .5rem}
+@media (max-width:991px){.topbar .nav-link.active{box-shadow:inset 3px 0 var(--lime);padding-left:.9rem}.topbar .navbar-nav{padding:.5rem 0}}
+.demo-banner{background:var(--lime);color:#141800;text-align:center;font-weight:600;padding:.3rem .75rem;font-size:.78rem}
+/* hero */
+.hero{background:var(--g900);background-image:linear-gradient(rgba(255,255,255,.035) 1px,transparent 1px),linear-gradient(90deg,rgba(255,255,255,.035) 1px,transparent 1px);background-size:44px 44px;color:#fff;padding:4rem 0 3.5rem;border-bottom:4px solid var(--lime)}
+.hero h1{font-size:clamp(2rem,5vw,3.25rem);line-height:1.08;letter-spacing:-.025em;font-weight:800}
+.hero .sub{font-family:'Manrope',sans-serif;font-size:clamp(1rem,2vw,1.2rem);font-weight:600;color:var(--lime);margin:.8rem 0 .6rem}
+.hero p.lead{max-width:34rem;color:#b8c0c6;font-size:1rem}
+.hero .btn{padding:.55rem 1.05rem;font-size:.9rem}
+.snap{background:rgba(255,255,255,.05);border:1px solid rgba(255,255,255,.12);border-radius:.7rem;padding:1.1rem}
+.snap h2{font-size:.95rem;color:#fff;margin:0 0 .8rem;font-weight:600}
+.snap .row-b{display:grid;grid-template-columns:6rem 1fr 3.3rem;gap:.55rem;align-items:center;font-size:.8rem;color:#c9d0d5;margin:.4rem 0}
+.snap .bar{height:.5rem;background:rgba(255,255,255,.1);border-radius:1rem;overflow:hidden}.snap .bar i{display:block;height:100%;background:var(--lime);border-radius:1rem}
+.snap .v{text-align:right;font-variant-numeric:tabular-nums;color:#fff}.snap .foot{font-size:.72rem;color:#8f99a1;margin-top:.7rem}
+/* buttons */
+.btn{border-radius:.45rem;font-weight:600}
+.btn-gold{background:var(--lime);color:#141800;border:0}.btn-gold:hover{background:#d8ff5a;color:#141800}
+.hero .btn-outline-light{border-color:rgba(255,255,255,.35)}.hero .btn-outline-light:hover{background:#fff;color:var(--g900)}
+.btn-green{background:var(--g800);color:#fff;border:0}.btn-green:hover{background:var(--lime);color:#141800}
+/* layout */
+.section{padding:2.5rem 0}.section.alt{background:var(--g100)}
+main h1{font-size:clamp(1.4rem,3vw,1.75rem);margin-bottom:1.2rem;padding-bottom:.75rem;position:relative}
+main h1:after{content:"";position:absolute;left:0;bottom:0;width:3rem;height:3px;background:var(--lime);border-radius:2px}
+.section h2{font-size:clamp(1.2rem,2.5vw,1.4rem)}
+.pipeline{display:flex;flex-wrap:wrap;gap:.4rem;align-items:center;font-weight:600}
+.pipeline span.s{background:var(--g800);color:#fff;padding:.3rem .7rem;border-radius:.4rem;border-bottom:3px solid var(--lime);font-size:.82rem}.pipeline i{color:var(--g400);font-style:normal}
+.panel{background:#fff;border:1px solid var(--line);border-radius:.65rem;padding:1rem;box-shadow:0 1px 2px rgba(20,24,27,.04);min-width:0}
+.panel h3{font-size:.98rem;margin-bottom:.7rem}
+.kpi{background:#fff;border:1px solid var(--line);border-top:3px solid var(--lime);border-radius:.55rem;padding:.65rem .85rem;height:100%}
+.kpi .v{font-family:'Manrope',sans-serif;font-size:clamp(1.15rem,2.4vw,1.5rem);font-weight:700;line-height:1.15;font-variant-numeric:tabular-nums;overflow-wrap:anywhere}
+.kpi .l{color:var(--gray);font-size:.78rem;margin-top:.15rem}
+.chart-box{position:relative;height:270px}.chart-box.tall{height:600px}
+.badge-risk{font-weight:600;font-size:.74rem;padding:.25em .55em;border-radius:.3rem;color:#fff;display:inline-block}
+.b-HIGH{background:var(--high)}.b-MEDIUM{background:var(--med)}.b-LOW{background:var(--low)}.b-NA{background:var(--g400)}
+#map{height:clamp(380px,68vh,620px);border-radius:.65rem;border:1px solid var(--line)}
+.leaflet-tile-pane{filter:grayscale(.85) brightness(1.04) contrast(.95)}
+table.t{width:100%;font-size:.86rem;font-variant-numeric:tabular-nums}
+table.t th{text-align:left;font-weight:600;color:var(--g600);border-bottom:2px solid var(--g700);padding:.45rem .55rem;white-space:nowrap}
+table.t td{border-bottom:1px solid var(--line);padding:.45rem .55rem}table.t tbody tr:hover{background:var(--g50)}
+.note{color:var(--gray);font-size:.8rem}
+.form-label{font-weight:600;font-size:.8rem;color:var(--g600);margin-bottom:.25rem}
+.form-select,.form-control{border-color:var(--g200);border-radius:.4rem;font-size:.9rem}
+.form-select:focus,.form-control:focus{border-color:var(--limeD);box-shadow:0 0 0 .2rem rgba(198,244,50,.4)}
+.form-check-input:checked{background-color:var(--g800);border-color:var(--g800)}
+footer{background:var(--g900);color:#8f99a1;padding:1.4rem 0;font-size:.8rem;border-top:4px solid var(--lime);margin-top:2rem}
+:focus-visible{outline:3px solid var(--limeD);outline-offset:2px}
+/* tablet and phone */
+@media (max-width:767px){.hero{padding:2.75rem 0 2.5rem}.section{padding:2rem 0}.chart-box{height:240px}.chart-box.tall{height:520px}}
+@media (max-width:575px){.hero .btn{width:100%}.snap .row-b{grid-template-columns:5rem 1fr 3rem}.panel{padding:.85rem}.table-wrap,.panel[style*="overflow-x"]{-webkit-overflow-scrolling:touch}}
+@media (prefers-reduced-motion:reduce){*{scroll-behavior:auto!important;transition:none!important}}
