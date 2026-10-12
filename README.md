@@ -55,7 +55,7 @@ Observational data; no causal claims. Plot yield depends on factors the survey d
 MySQL loader; rainfall and soil data as extra predictors; district-level forecasting; validated risk thresholds.
 
 ## Team
-TODO: add the two team members and universities.
+ISHIMWE Mugisha Emery, INES Ruhengeri
 
 ## Hackathon
 2026 NISR Big Data Hackathon, Track 1: Agricultural Productivity.
