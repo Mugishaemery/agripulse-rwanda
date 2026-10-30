@@ -63,4 +63,4 @@ ISHIMWE Mugisha Emery, INES Ruhengeri
 2026 NISR Big Data Hackathon, Track 1: Agricultural Productivity.
 
 ## AI tool disclosure
-AI assistance (Claude, by Anthropic) was used for code, analysis and documentation drafting. The team reviewed the work and is responsible for it.
+AI assistance (Claude, by Anthropic) helped in develping, analysis and drafting. The team reviewed the work and is responsible for it.
