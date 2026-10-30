@@ -1,4 +1,3 @@
-/* AgriPulse design tokens: graphite chrome, lime spark accent, calm light content */
 :root{--g900:#14181b;--g800:#1b2024;--g700:#2a3136;--g600:#434c53;--g400:#79838b;--g200:#d9dee2;--g100:#eceff1;--g50:#f6f7f8;
 --lime:#c6f432;--limeD:#7ea10a;--ink:#1b2024;--gray:#5d676f;--line:#dde1e4;--high:#b3392f;--med:#c27d0e;--low:#2c7a4b}
 html{color-scheme:light}
@@ -6,7 +5,6 @@ body{background:var(--g50);color:var(--ink);font-family:'IBM Plex Sans',system-u
 h1,h2,h3,h4,.brand{font-family:'Manrope','IBM Plex Sans',sans-serif;letter-spacing:-.015em;font-weight:700;color:inherit}
 img,canvas,svg{max-width:100%}
 a{color:#2f4400;text-underline-offset:3px}a:hover{color:#000}
-/* nav */
 .topbar{background:var(--g900);padding:.55rem 0}
 .topbar .navbar-brand{color:#fff;font-size:1.1rem;display:flex;align-items:center;gap:.5rem;margin-right:1rem}
 .topbar .navbar-brand:before{content:"";width:.7rem;height:.7rem;border-radius:50%;background:var(--lime);box-shadow:0 0 0 3px rgba(198,244,50,.18)}
@@ -15,7 +13,6 @@ a{color:#2f4400;text-underline-offset:3px}a:hover{color:#000}
 .topbar .navbar-toggler{border:1px solid rgba(255,255,255,.25);padding:.3rem .5rem}
 @media (max-width:991px){.topbar .nav-link.active{box-shadow:inset 3px 0 var(--lime);padding-left:.9rem}.topbar .navbar-nav{padding:.5rem 0}}
 .demo-banner{background:var(--lime);color:#141800;text-align:center;font-weight:600;padding:.3rem .75rem;font-size:.78rem}
-/* hero */
 .hero{background:var(--g900);background-image:linear-gradient(rgba(255,255,255,.035) 1px,transparent 1px),linear-gradient(90deg,rgba(255,255,255,.035) 1px,transparent 1px);background-size:44px 44px;color:#fff;padding:4rem 0 3.5rem;border-bottom:4px solid var(--lime)}
 .hero h1{font-size:clamp(2rem,5vw,3.25rem);line-height:1.08;letter-spacing:-.025em;font-weight:800}
 .hero .sub{font-family:'Manrope',sans-serif;font-size:clamp(1rem,2vw,1.2rem);font-weight:600;color:var(--lime);margin:.8rem 0 .6rem}
@@ -26,12 +23,10 @@ a{color:#2f4400;text-underline-offset:3px}a:hover{color:#000}
 .snap .row-b{display:grid;grid-template-columns:6rem 1fr 3.3rem;gap:.55rem;align-items:center;font-size:.8rem;color:#c9d0d5;margin:.4rem 0}
 .snap .bar{height:.5rem;background:rgba(255,255,255,.1);border-radius:1rem;overflow:hidden}.snap .bar i{display:block;height:100%;background:var(--lime);border-radius:1rem}
 .snap .v{text-align:right;font-variant-numeric:tabular-nums;color:#fff}.snap .foot{font-size:.72rem;color:#8f99a1;margin-top:.7rem}
-/* buttons */
 .btn{border-radius:.45rem;font-weight:600}
 .btn-gold{background:var(--lime);color:#141800;border:0}.btn-gold:hover{background:#d8ff5a;color:#141800}
 .hero .btn-outline-light{border-color:rgba(255,255,255,.35)}.hero .btn-outline-light:hover{background:#fff;color:var(--g900)}
 .btn-green{background:var(--g800);color:#fff;border:0}.btn-green:hover{background:var(--lime);color:#141800}
-/* layout */
 .section{padding:2.5rem 0}.section.alt{background:var(--g100)}
 main h1{font-size:clamp(1.4rem,3vw,1.75rem);margin-bottom:1.2rem;padding-bottom:.75rem;position:relative}
 main h1:after{content:"";position:absolute;left:0;bottom:0;width:3rem;height:3px;background:var(--lime);border-radius:2px}
@@ -58,7 +53,6 @@ table.t td{border-bottom:1px solid var(--line);padding:.45rem .55rem}table.t tbo
 .form-check-input:checked{background-color:var(--g800);border-color:var(--g800)}
 footer{background:var(--g900);color:#8f99a1;padding:1.4rem 0;font-size:.8rem;border-top:4px solid var(--lime);margin-top:2rem}
 :focus-visible{outline:3px solid var(--limeD);outline-offset:2px}
-/* tablet and phone */
 @media (max-width:767px){.hero{padding:2.75rem 0 2.5rem}.section{padding:2rem 0}.chart-box{height:240px}.chart-box.tall{height:520px}}
 @media (max-width:575px){.hero .btn{width:100%}.snap .row-b{grid-template-columns:5rem 1fr 3rem}.panel{padding:.85rem}.table-wrap,.panel[style*="overflow-x"]{-webkit-overflow-scrolling:touch}}
 @media (prefers-reduced-motion:reduce){*{scroll-behavior:auto!important;transition:none!important}}

@@ -1,4 +1,3 @@
-// Shared helpers: nav, API client, formatting, DEMO banner.
 const PAGES = [['/', 'Home'], ['/dashboard', 'Dashboard'], ['/map', 'Map'], ['/crops', 'Crops'], ['/prediction', 'Prediction'], ['/risk', 'Risk'], ['/about', 'About']];
 const $ = s => document.querySelector(s);
 const fmt = n => n == null ? '—' : Number(n).toLocaleString();
