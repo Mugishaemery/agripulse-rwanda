@@ -1,8 +1,3 @@
-// Data access + analytics. Three modes, chosen automatically:
-//  'aggregate' : data/processed/aggregates.json  = NISR SAS 2024 published district tables (REAL)  <- current
-//  'record'    : data/processed/records.json     = NISR plot-level microdata (REAL, once available)
-//  'demo'      : data/demo/records.json          = synthetic UI data (DEMO)
-// Row shape (all modes): district, province, crop, season, plot_area_sqm (= harvested area), cultivated_ha, production_kg, yield_kg_ha
 const fs = require('fs'), path = require('path');
 const districts = require('./districts');
 const root = path.join(__dirname, '../..'), P = f => path.join(root, f), J = f => JSON.parse(fs.readFileSync(P(f), 'utf8'));
@@ -25,7 +20,6 @@ function filter(q = {}) {
   return records.filter(r => (!q.province || r.province === q.province) && (!q.district || r.district === q.district)
     && (!q.season || r.season === q.season) && (!q.crop || r.crop === q.crop));
 }
-// Pooled yield = total production / total harvested area (ratio of sums) - matches NISR's definition for aggregates.
 function summarize(rows) {
   const area = rows.reduce((a, r) => a + ha(r), 0), prod = rows.reduce((a, r) => a + r.production_kg, 0);
   return { n: rows.length, cultivated_ha: Math.round(rows.reduce((a, r) => a + cult(r), 0)), harvested_ha: Math.round(area),
@@ -35,10 +29,8 @@ function groupBy(rows, key) {
   const m = new Map(); rows.forEach(r => { const k = typeof key === 'function' ? key(r) : r[key]; (m.get(k) || m.set(k, []).get(k)).push(r); });
   return [...m].map(([k, v]) => ({ key: k, ...summarize(v) })).sort((a, b) => b.yield_kg_ha - a.yield_kg_ha);
 }
-// Observed/expected index: expected = harvested area x national yield of the SAME crop and season. 1.0 = national level.
 const nat = Object.fromEntries(Object.entries(records.reduce((m, r) => { (m[r.crop + '|' + r.season] = m[r.crop + '|' + r.season] || []).push(r); return m; }, {})).map(([k, v]) => [k, summarize(v).yield_kg_ha]));
 const index = rows => { const e = rows.reduce((a, r) => a + ha(r) * (nat[r.crop + '|' + r.season] || 0), 0); return e ? rows.reduce((a, r) => a + r.production_kg, 0) / e : null; };
-// RULE-BASED thresholds (provisional; see docs/methodology.md).
 const level = i => (i == null ? 'N/A' : i < 0.9 ? 'HIGH' : i < 1.0 ? 'MEDIUM' : 'LOW');
 
 const FACTORS = { improved_seed_pct: 'improved seed', organic_fertilizer_pct: 'organic fertilizer', inorganic_fertilizer_pct: 'inorganic fertilizer', pesticide_pct: 'pesticide',
@@ -49,7 +41,6 @@ const inputFor = (d, season) => { const rs = inputRows.filter(x => x.district ==
 const pearson = (x, y) => { const n = x.length, mx = x.reduce((a, b) => a + b) / n, my = y.reduce((a, b) => a + b) / n;
   let sxy = 0, sxx = 0, syy = 0; x.forEach((v, i) => { sxy += (v - mx) * (y[i] - my); sxx += (v - mx) ** 2; syy += (y[i] - my) ** 2; }); return sxx && syy ? sxy / Math.sqrt(sxx * syy) : null; };
 
-// Aggregate mode: association between district input shares and the district productivity index (30 districts, same season).
 function inputs(q = {}) {
   if (mode !== 'aggregate') return { available: false, message: 'District input shares need the aggregate tables.' };
   const season = q.season || 'A', tbl = riskTable({ season, crop: q.crop });
@@ -73,7 +64,6 @@ function riskTable(q) {
     return { district: d.name, province: d.province, lat: d.lat, lng: d.lng, ...summarize(rs), index: i == null ? null : +i.toFixed(2), risk: level(i), observed_differences: flags };
   }).filter(r => r.n > 0).sort((a, b) => a.index - b.index);
 }
-// Estimator. aggregate: OFFICIAL district yield for crop+season (a baseline, NOT a model). demo/record: similar-record average.
 function predict(x) {
   if (mode === 'aggregate') {
     const cell = records.find(r => r.district === x.district && r.crop === x.crop && r.season === x.season && r.yield_kg_ha);
