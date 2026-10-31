@@ -1,3 +1,15 @@
+
+
+https://github.com/user-attachments/assets/a84d62a4-0aa3-454e-be3f-113004b956f5
+
+
+
+https://github.com/user-attachments/assets/eb06552d-ba71-4398-ba9a-280111df66e0
+
+
+
+
+
 # AgriPulse Rwanda
 **Live demo:** https://agripulse-rwanda.onrender.com
 
@@ -64,3 +76,8 @@ ISHIMWE Mugisha Emery, INES Ruhengeri
 
 ## AI tool disclosure
 AI assistance (Claude, by Anthropic) helped in develping, analysis and drafting. The team reviewed the work and is responsible for it.
+
+## VIDEO
+
+https://github.com/user-attachments/assets/3e0f9f88-7723-47d3-b43e-52bea719fa69
+
