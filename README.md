@@ -1,15 +1,3 @@
-
-
-https://github.com/user-attachments/assets/a84d62a4-0aa3-454e-be3f-113004b956f5
-
-
-
-https://github.com/user-attachments/assets/eb06552d-ba71-4398-ba9a-280111df66e0
-
-
-
-
-
 # AgriPulse Rwanda
 **Live demo:** https://agripulse-rwanda.onrender.com
 
